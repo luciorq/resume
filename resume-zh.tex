@@ -11,15 +11,18 @@
 % | Copyrgiht (c) 2012-2013 by huxuan. All rights reserved.
 % +-----------------------------------------------------------------------------
 
-\documentclass[color]{resumecls}
+\documentclass[]{resumecls}
 \usepackage[default]{sourcesanspro}
+\usepackage{fontawesome}
 \usepackage{sourcecodepro}
 % \ctexset{today=small}
-
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  
 \name{黄湘云}
 \organization{中国矿业大学（北京）}
 \address{北京市海淀区学院路丁11号，100083}
-\mobile{+86 188 1097 2907}
+\mobile{188 1097 2907}
 \mail{xiangyunfaith@outlook.com}
 \homepage{https://xiangyun.netlify.com/}
 % \leftfooter{最后更新: \today}
@@ -37,16 +40,16 @@
     \heiti{中国矿业大学（北京）} & 北京市 & 2015.09--2018.12 \\
 }
 \entry{4em}{lXX}{%
-    理学硕士学位 & 理学院 & 统计学 \\
-	毕业论文：《空间广义线性混合效应模型及其应用》 &  & \\
-	研究方向：数据分析与统计计算 & &
+    理学硕士学位 \quad 理学院 \quad 统计学 \\
+	毕业论文：《空间广义线性混合效应模型及其应用》  \\
+	研究方向：数据分析与统计计算 
 }
 
 \entry{2em}{Xrp{8em}}{%
     \heiti{中国矿业大学（北京）} & 北京市 & 2011.09--2015.06 \\
 }
 \entry{4em}{lXX}{%
-    理学学士学位 & 理学院 & 数学与应用数学 \\
+    理学学士学位  \quad 理学院 \quad 数学与应用数学 \\
 	% 毕业论文：《统计方法在区域经济社会发展综合评价中的应用》 &  &  \\
 }
 
@@ -104,12 +107,37 @@ ARMA 和GARCH 模型，贝叶斯时间序列分析工具prophet（包含频谱�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \heading{数据可视化}
 \entry{2em}{Xp{8em}}{%
-    \heiti{地点} & 起止时间 \\
+    {\heiti 空间数据可视化} 
+	\vspace*{-.45cm}
+	\begin{itemize}
+	\tightlist
+	\item 案例1：从中国地震台网获取2012年4月至2017年8月5级及以上的地震数据
+	\item 案例2：从美国地质调查局获取1973年至2010年世界各地6级及以上地震数据集
+	\item 主要工作：基于 ggplot2和animotion等R包，制作动态、平面和立体时空数据可视化
+	\end{itemize}
+	{\heiti 社区开发者网络可视化} 
+	\vspace*{-.45cm}
+	\begin{itemize}
+	\tightlist
+	\item 分析目标：可视化R语言社区中开发者相互合作的关系网络、挖掘出对社区贡献大的组织、个人
+	\item 主要工作：抓取CRAN官方11000+ R包信息、RStudio官网下载日志，正则表达式提取开发者、贡献者字段，清洗后，建立有向图网络，使用ggplot2等可视化包，呈现贡献关系网络。
+	\end{itemize}
 }
-\entry{4em}{X}{实验室名称 \quad 职位}
-\entry{6em}{X}{%
-    研究方向和具体内容 \\
-    发表成果（亦可使用bibtex，像这样\cite{label}，见文档最后注释内容） \\
+\heading{项目实战}
+\entry{2em}{Xp{8em}}{%
+    {\heiti 遗传性疾病基因数据的分析和建模}
+	\vspace*{-.45cm}
+	\begin{itemize}
+	\tightlist
+	\item 分析目标：定性与定量相结合的方法找出与遗传性疾病相关的基因位点
+	\item 使用 Pearson 卡方检验降维，岭回归、Lasso 回归和适应性 Lasso 回归做特征提取，利用 Cp、AICC、GCV、BIC 准则做特征选择，logistic分布做损失函数，得到很可能是致病位点的集合。
+	\end{itemize}
+    {\heiti 可重复的定时数据分析报告}
+	\vspace*{-.45cm}
+	\begin{itemize}
+	\tightlist
+	\item 在大规模新浪运维日志数据上，基于 Docker、Clickhose 和 R Markdown 制作数据分析报告
+	\end{itemize}	
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -117,7 +145,7 @@ ARMA 和GARCH 模型，贝叶斯时间序列分析工具prophet（包含频谱�
 \entry{2em}{lX}{%
     语言 & R、SQL、\LaTeX 、MATLAB、Python \\
     系统 & Windows、Linux \\
-    软件/工具 & RStudio、Github、Markdown、Docker、ggplot2、SparkR \\
+    工具 & RStudio、Github、Markdown、Docker、ggplot2、SparkR \\
     统计 & 数据清洗、探索、处理、建模与可视化、统计计算与绘图 \\
 	英语 & 能够流畅地阅读专业领域内的论文和其它文献，并熟练地用英文检索遇到的问题
 }
@@ -125,21 +153,21 @@ ARMA 和GARCH 模型，贝叶斯时间序列分析工具prophet（包含频谱�
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\heading{统计之都社区贡献}
+\heading{社区贡献：统计之都 https://cosx.org/}
 \entry{2em}{lX}{%
     R语言做符号计算（一作） & https://cosx.org/2016/07/r-symbol-calculate\\
     随机数生成及其在统计模拟中的应用（一作） & https://cosx.org/2017/05/random-number-generation/ \\
 	漫谈条形图（一作） & https://cosx.org/2017/10/discussion-about-bar-graph/ \\
 	心理学的危机（主审） & https://cosx.org/2017/09/psychology-in-crisis/ \\
-	承担工作 & 主站编辑、作者、审稿人、论坛版主\\
+	在统计之都的工作 & 编辑、作者、审稿人、论坛版主\\
 	第11届中国R语言会议（北京）演讲嘉宾 & 2018.05.27\\
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 如果不需要发表成果，注释这一段即可
-\heading{附：发表成果}
-\vspace{-6em}
-\bibliography{resume}
+% \heading{附：发表成果}
+% \vspace{-6em}
+% \bibliography{resume}
 
 \end{table}
 \end{document}
